@@ -25,7 +25,6 @@ def main():
 		moveable_files = [t for t in files_and_prefix if 0 < prefixes.count(t[1]) ]
 		log("-----------------------------------------------")
 		for t in moveable_files:
-			#print("* "+t[1]+" <- "+t[0])
 			dest = join(dirname(t[0]),t[1])
 
 			log(" * " + basename(dest) + " <- " + t[0])

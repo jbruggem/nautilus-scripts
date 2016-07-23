@@ -7,7 +7,6 @@ LOGSTDOUT = False or 0 < sys.argv.count('stdout')
 
 import os, errno
 from os.path import join, basename,dirname,getsize
-#from subprocess import call
 files = os.environ.get('NAUTILUS_SCRIPT_SELECTED_FILE_PATHS')
 
 if DEBUG:
@@ -58,7 +57,7 @@ def filterdir(directoryPath, keepFunction, deleteFunction, dirDeleteFunction):
 if files:
 	files = files.split('\n')
 	for f in files:
-		#log(""+f+"\n")
+		log(""+f+"\n")
 		if not f:
 			continue
 		if os.path.isdir(f):
